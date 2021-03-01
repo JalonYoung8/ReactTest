@@ -14,7 +14,7 @@ function Intro(props) {
         <div onClick={increment}>
             <h1>Name: {props.name}</h1>
             <h2>I am {age} years old</h2>
-            <h3>My Fav color is {props.color}</h3>
+            <h3 style={{color: 841717}}>My Fav color is {props.color}</h3>
         </div>
 
     );

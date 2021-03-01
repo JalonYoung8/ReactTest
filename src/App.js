@@ -1,10 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import Intro from './Intro'
+import Intro from './Intro';
+import Box from './Box';
+import BlueBox from './BlueBox';
+import PropBox from "./PropBox";
+
 
 function App() {
   return (
     <div className="App">
+        <BlueBox></BlueBox>
+        <BlueBox></BlueBox>
+        <BlueBox></BlueBox>
+        <PropBox bgColor="blue" borderColor="red" />
+        <PropBox bgColor="purple" borderColor="green" />
+        <PropBox bgColor="orange" borderColor="yellow" />
+        <Box></Box>
+        <Box></Box>
+        <Box></Box>
       <Intro name="Dude" age = "265" color = "blue" />
       <Intro name="Bruh" age = "5" color = "pink" />
       <Intro name="amogus" age = "175" color = "red" />
