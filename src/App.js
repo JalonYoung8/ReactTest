@@ -4,11 +4,13 @@ import Intro from './Intro';
 import Box from './Box';
 import BlueBox from './BlueBox';
 import PropBox from "./PropBox";
+import Hero from "./Hero";
 
 
 function App() {
   return (
     <div className="App">
+        <Hero></Hero>
         <BlueBox></BlueBox>
         <BlueBox></BlueBox>
         <BlueBox></BlueBox>
