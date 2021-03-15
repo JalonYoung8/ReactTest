@@ -5,43 +5,35 @@ import Box from './Box';
 import BlueBox from './BlueBox';
 import PropBox from "./PropBox";
 import Hero from "./Hero";
-
+import Fullpage from "./Fullpage";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Nav from "./Nav";
+import Info from "./Info";
+import Indvidual from "./Indvidual";
+import Person from "./Person";
+import Self from "./Self";
+import Cool from "./Cool";
 
 function App() {
   return (
-    <div className="App">
-        <Hero></Hero>
-        <BlueBox></BlueBox>
-        <BlueBox></BlueBox>
-        <BlueBox></BlueBox>
-        <PropBox bgColor="blue" borderColor="red" />
-        <PropBox bgColor="purple" borderColor="green" />
-        <PropBox bgColor="orange" borderColor="yellow" />
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-      <Intro name="Dude" age = "265" color = "blue" />
-      <Intro name="Bruh" age = "5" color = "pink" />
-      <Intro name="amogus" age = "175" color = "red" />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Name: Jalond Young (I Think?)
-          <br></br>
-          Job: UI Designer
-          <br></br>
-          Fav Number: 8
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Router>
+       <div className="App">
+           <Nav></Nav>
+           <Switch>
+               <Route exact path={"/"} component={Box}/>
+               <Route path={"/data"} component={Info}/>
+               <Route path={"/0"} component={Indvidual}/>
+               <Route path={"/1"} component={Person}/>
+               <Route path={"/2"} component={Self}/>
+               <Route path={"/Cool"} component={Cool}/>
+               <Route path={"/fullpage/:color"} component={Fullpage}/>
+           </Switch>
+
+
+
+       </div>
+   </Router>
+
   );
 }
 

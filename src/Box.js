@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import style from './style'
+import React, { useState } from 'react';
+import {Link} from "react-router-dom";
 
 
-function Box() {
+function Box(props) {
 
 
 
@@ -12,10 +12,17 @@ function Box() {
         const boxStyle =  {
             height: "100px",
             width: "100px",
-            backgroundColor: boxColor,
-            borderStyle: "solid",
-            borderWeight: "2px",
-            borderColor: borderColor
+            backgroundColor: "red",
+        }
+        const boxStyle2 =  {
+                height: "100px",
+                width: "100px",
+                backgroundColor: "yellow",
+            }
+        const boxStyle3 =  {
+            height: "100px",
+            width: "100px",
+            backgroundColor: "blue",
         }
 
     function increase() {
@@ -37,8 +44,21 @@ function Box() {
 
 
     return (
-        <div onClick={increase} style={boxStyle}></div>
-)   ;
+        <div>
+            <Link exact to={"/fullpage/red"}>
+                <div style={boxStyle}></div>
+            </Link>
+
+            <Link exact to={"/fullpage/red"}>
+                <div style={boxStyle2}></div>
+            </Link>
+            <Link exact to={"/fullpage/red"}>
+                <div style={boxStyle3}></div>
+            </Link>
+        </div>
+
+
+    );
 }
 
 export default Box;
