@@ -12,7 +12,7 @@ function PropBox(props) {
             backgroundColor: (props.bgColor),
             borderStyle: "solid",
             borderWeight: "2px",
-            borderColor: (props.borderColor)
+
         }
 
 

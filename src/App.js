@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Intro from './Intro';
@@ -13,23 +14,19 @@ import Indvidual from "./Indvidual";
 import Person from "./Person";
 import Self from "./Self";
 import Cool from "./Cool";
+import Counter from "./Counter";
+
+
+const User = ({ match }) => {
+    return(<h1>Welcome User {match.params.username}</h1>)
+
+}
 
 function App() {
   return (
    <Router>
        <div className="App">
-           <Nav></Nav>
-           <Switch>
-               <Route exact path={"/"} component={Box}/>
-               <Route path={"/data"} component={Info}/>
-               <Route path={"/0"} component={Indvidual}/>
-               <Route path={"/1"} component={Person}/>
-               <Route path={"/2"} component={Self}/>
-               <Route path={"/Cool"} component={Cool}/>
-               <Route path={"/fullpage/:color"} component={Fullpage}/>
-           </Switch>
-
-
+           <Counter></Counter>
 
        </div>
    </Router>
