@@ -1,12 +1,22 @@
-import Wrapper from './components/Wrapper/Wrapper';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import Navbar from './components/UI/Navbar/Navbar';
+import Wrapper from './components/pages/Wrapper/Wrapper';
+
+import { ProductState } from './context/productsContext';
 
 import './App.scss';
 
 function App() {
   return (
-    <div className='App'>
-      <Wrapper />
-    </div>
+    <Router>
+      <ProductState>
+        <div className='App'>
+          <Navbar />
+          <Wrapper />
+        </div>
+      </ProductState>
+    </Router>
   );
 }
 
